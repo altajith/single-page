@@ -18,6 +18,9 @@
     <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
     <!-- Add fancyBox main JS and CSS files -->
     <script type="text/javascript" src="js/jquery.fancybox.js?v=2.1.5"></script>
+    
+    <script type="text/javascript" src="js/jquery.zoom.js"></script>
+    
     <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css?v=2.1.5" media="screen" />
     <script>
         $(document).ready(function() {
@@ -37,33 +40,7 @@
             </script>
     </head>
     <body>
-<script>
-	window.onload=function(){
-  		load_scores();
-	};
-	
-	function load_scores(){
-		
-  		if (window.XMLHttpRequest) {
-    		// code for IE7+, Firefox, Chrome, Opera, Safari
-    		xmlhttp=new XMLHttpRequest();
-  		} else {  // code for IE6, IE5
-    		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-  		}
-  		xmlhttp.onreadystatechange=function() {
-    		if (xmlhttp.readyState==4 && xmlhttp.status==200) {
-      			document.getElementById("rssOutput").innerHTML=xmlhttp.responseText;
-    		}
-  		}
-  		xmlhttp.open("GET","http://www.councilofcoders.com/world-cup-app/getrss.php",true);
-  		xmlhttp.send();
-	}
-	
-	
-  	function RefreshMe(){
-  		location.reload();
-  	}
-</script>
+
 
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
@@ -82,21 +59,22 @@
       </div>
     </div>
     <div class="clearfix">
+     <h1>Match Shcedules</h1>
+     <a class="hire-me" href="index.html">Back</a>
+   
+    <div ><img src="images/wc-shcedule.png" style="width:100%; height:100%;"></div>
     
-    <a class="hire-me" href="#" onclick="RefreshMe()">Refresh</a> 
-    
-     <a class="hire-me" href="matches.html">Matches</a>
-    
-    <div id="rssOutput">Data will be listed here...</div>
-    
+    	<script>
+    	$(document).ready(function(){
+  			$('img')
+    		.wrap('<span style="display:inline-block"></span>')
+    		.css('display', 'block')
+    		.parent()
+    		.zoom();
+		});
+    	</script>
     </div>
-    <!-- Footer -->
-    <div class="footer">
-      <div class="container">
-        <p class="pull-left"><a href="http://erbenlab.com">www.erbenlab.com</a></p>
-            <!-- <p class="pull-right"><a href="##myModal" role="button" data-toggle="modal"> <i class="icon-mail"></i> CONTACT</a></p>-->
-      </div>
-    </div>
+ 
     <!-- Contact form in Modal -->
     <!-- Modal 
     <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
