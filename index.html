@@ -55,7 +55,7 @@
       			document.getElementById("rssOutput").innerHTML=xmlhttp.responseText;
     		}
   		}
-  		xmlhttp.open("GET","http://www.councilofcoders.com/world-cup-app/getrss.php",true);
+  		xmlhttp.open("GET","getrss.php",true);
   		xmlhttp.send();
 	}
 	
@@ -83,7 +83,9 @@
     </div>
     <div class="clearfix">
     
-    <a class="hire-me" href="#" onclick="RefreshMe()">Refresh</a>
+    <a class="hire-me" href="#" onclick="RefreshMe()">Refresh</a> 
+    
+     <a class="hire-me" href="matches.html">Matches</a>
     
     <div id="rssOutput">Data will be listed here...</div>
     
