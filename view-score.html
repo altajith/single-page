@@ -67,6 +67,12 @@
   	function RefreshMe(){
   		location.reload();
   	}
+  	
+  	 $(document).ready(function() {
+    	$(window).scroll(function() {
+      		RefreshMe();
+    	});
+	});
 </script>
 
     <div class="navbar navbar-fixed-top">
@@ -88,10 +94,9 @@
     <div class="clearfix">
     <div id="rssOutput">
     <a class="hire-me" href="index.html">Back</a> 
-    <a class="hire-me" href="#" onclick="RefreshMe()">Refresh</a><br/><br/></div>
     
     </div>
-  
+   	Pull to refresh.
     <script src="js/vertical-scroll.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
