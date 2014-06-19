@@ -1,0 +1,3217 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>SINGLE PAGE | Flat Design Mini Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Flat Design Mini Portfolio">
+    <meta name="keywords" content="responsive, bootstrap, flat design, flat ui, portfolio">
+    <meta name="author" content="Dzyngiri">
+    <meta name="description" content="This is a responsive flat design mini portfolio for creative folks who want to showcase their work online.">
+    <!-- styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+   <link media="screen and (min-width: 200px) and (max-width: 1500px)"href="css/style-single-page.css" rel="stylesheet">
+    <link href="font/css/fontello.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+    <!-- Add jQuery library -->
+    <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+	 <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <!-- Add fancyBox main JS and CSS files -->
+    <script type="text/javascript" src="js/jquery.fancybox.js?v=2.1.5"></script>
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css?v=2.1.5" media="screen" />
+    <script>
+	
+	function show_det(detail_id)
+	{
+	
+	$("#mat"+detail_id).fadeIn("linear")
+	}
+	function hide_det(detail_id)
+	{
+	$("#mat"+detail_id).fadeOut("linear")
+	}
+	
+        $(document).ready(function() {
+            $(".fancybox-thumb").fancybox({
+                helpers	: {
+                    title	: {
+                        type: 'inside'
+                    },
+                    overlay : {
+                                css : {
+                                    'background' : 'rgba(1,1,1,0.65)'
+                                }
+                            }
+                }
+            });
+        });
+            </script>
+    </head>
+    <body>
+<script>
+	window.onload=function(){
+  		load_scores();
+	};
+	
+	$(document).ready(function () {
+        $('#select-anchor').change( function () {
+            var targetPosition = $($(this).val()).offset().top;
+            $('html,body').animate({ scrollTop: targetPosition}, 'slow');
+        });
+    });
+
+	
+		function load_scores(){
+		
+  		if (window.XMLHttpRequest) {
+    		// code for IE7+, Firefox, Chrome, Opera, Safari
+    		xmlhttp=new XMLHttpRequest();
+  		} else {  // code for IE6, IE5
+    		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  		}
+  		xmlhttp.onreadystatechange=function() {
+    		if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+      			document.getElementById("rssOutput").innerHTML=xmlhttp.responseText;
+    		}
+  		}
+  		xmlhttp.open("GET","http://www.councilofcoders.com/world-cup-app/getrss.php",true);
+  		xmlhttp.send();
+	}
+	
+	
+  	function RefreshMe(){
+  		location.reload();
+  	}
+</script>
+
+     <div class="navbar">
+      <div class="navbar-inner header" >
+        <div class="container"><a class="brand">
+        <img class='img_style' style="" src="img/logo.png"/></a><h1 class="font_style">FIFA Live Scores</h1>
+             <!-- <ul class="nav nav-collapse pull-right">
+            <li><a href="#profile"><i class="icon-user"></i> Profile</a></li>
+            <li><a href="#skills"><i class="icon-trophy"></i> Skills</a></li>
+            <li><a href="#work"><i class="icon-picture"></i> Work</a></li>
+            <li><a href="#resume"><i class="icon-doc-text"></i> Resume</a></li>
+          </ul>
+      Everything you want hidden at 940px or less, place within here
+          <div class="nav-collapse collapse">
+          </div>-->
+        </div>
+      </div>
+    </div>
+	  
+    
+    <center>
+    <a class="btn btn-3 btn-3a icon-cart1" href="#" onclick="RefreshMe()"><i class="icon-paper-plane"></i><b>R</b>efresh</a> 
+    
+     <a class="btn btn-3 btn-3a icon-cart2" href="matches.html"><i class="icon-trophy"></i><b>M</b>atches</a>
+    </center>
+    <!-- <div id="rssOutput"></div>-->
+    <!-- </div>-->
+	<center>
+	<span class="title_style">Group Stage</span>
+	<table border ="0"  >
+	<tr>
+	<td>#</td>
+	<td width="70%;">Team</td>
+	<td>
+	<select name="dropdpown" size="0" id="select-anchor" style="max-width:70px;">
+	<option value="">Date</option>
+    <option value="#1">12</option>
+    <option value="#2">13</option>
+	<option value="#3">14</option>
+	<option value="#4">15</option>
+	<option value="#5">16</option>
+	<option value="#51">17</option>
+	<option value="#7">18</option>
+	<option value="#52">19</option>
+	<option value="#8">20</option>
+	<option value="#9">21</option>
+	<option value="#10">22</option>
+	<option value="#11">23</option>
+	<option value="#12">24</option>
+	<option value="#13">25</option>
+	<option value="#14">26</option>
+	<option value="#15">28</option>
+	<option value="#16">29</option>
+	<option value="#17">30</option>
+	
+ </select>
+ </td>
+	
+	</tr>
+		
+	<tr id="1">
+		<td onclick ="show_det(1);" class="btn btn-3 btn-3c" >&nbsp;&nbsp;1.</td>
+		<td> Brazil <b>Vs</b> Croatia</td>
+		<td> June 12</td>
+				
+	<tr/>
+	
+	<tr>
+	 <td id="mat1" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/braz.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/Crot.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Brazil 
+		 </td>
+		 <td align="center">		
+			 Croatia
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 5:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Sao Paulo <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(1);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	
+	<tr id="2">
+		<td onclick ="show_det(2);" class="btn btn-3 btn-3c" >&nbsp;&nbsp;2.</td>
+		<td> Mexico <b>Vs</b> Cameroon	</td>
+		<td> June 13</td>
+		
+	<tr/>
+	
+	<tr>
+	 <td id="mat2" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/Mexico.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/camer.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Mexico 
+		 </td>
+		 <td align="center">		
+			 Cameroon
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 1:00:00 PM	</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Natal<b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(2);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	<tr >
+		<td onclick ="show_det(3);" class="btn btn-3 btn-3c" >&nbsp;&nbsp;3.</td>
+		<td>Spain <b>Vs</b> Netherlands</td>
+		<td> June 13</td>
+	<tr/>
+	
+	<tr>
+	 <td id="mat3" style="display:none;" colspan="5" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/spain.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/nether.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Spain 
+		 </td>
+		 <td align="center">		
+			 Netherlands
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 4:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Salvador <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(3);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	<tr >
+		<td onclick ="show_det(4);" class="btn btn-3 btn-3c" >&nbsp;&nbsp;4.</td>
+		<td> Chile <b>Vs</b> Australia</td>
+		<td> June 13</td>
+		
+	<tr/>
+	
+	<tr>
+	 <td id="mat4" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/chile.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/aust.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Chile 
+		 </td>
+		 <td align="center">		
+			 Australia
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 7:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Curitiba <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(4);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	<tr id="3">
+		<td onclick ="show_det(5);" class="btn btn-3 btn-3c" >&nbsp;&nbsp;5.</td>
+		<td> Colombia <b>Vs</b> Greece	</td>
+		<td> June 14</td>
+		
+	<tr/>
+	
+	<tr>
+	 <td id="mat5" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/colomb.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/greece.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Colombia 
+		 </td>
+		 <td align="center">		
+			 Greece
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 1:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Belo Horizonte<b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(5);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+		
+	<tr>
+		<td onclick ="show_det(6);" class="btn btn-3 btn-3c" >&nbsp;&nbsp;6.</td>
+		<td> Uruguay <b>Vs</b> Costa Rica</td>
+		<td> June 14</td>
+	<tr/>
+	
+	<tr>
+	 <td id="mat6" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/urugu.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/costarica.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Uruguay 
+		 </td>
+		 <td align="center">		
+			 Costa Rica
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 4:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Fortaleza <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(6);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td onclick ="show_det(7);" class="btn btn-3 btn-3c" >&nbsp;&nbsp;7.</td>
+		<td> England <b>Vs</b> Italy</td>
+		<td> June 14</td>
+		
+	<tr/>
+	
+	<tr>
+	 <td id="mat7" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/england.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/italy.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			England 
+		 </td>
+		 <td align="center">		
+			 Italy
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 7:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Manaus <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(7);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	<tr>
+		<td onclick ="show_det(8);" class="btn btn-3 btn-3c" >&nbsp;&nbsp;8.</td>
+		<td>Côte d'Ivoire <b>Vs</b> Japan</td>
+		<td> June 14</td>
+		
+	<tr/>
+	<tr>
+	 <td id="mat8" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/cote.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/japan.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Côte d'Ivoire 
+		 </td>
+		 <td align="center">		
+			 Japan
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 10:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Recife <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(8);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	<tr id="4">
+		<td onclick ="show_det(9);" class="btn btn-3 btn-3c" >&nbsp;&nbsp;9.</td>
+		<td>Switzerland <b>Vs</b> Ecuador</td>
+		<td>June 15</td>
+		
+	<tr/>
+	<tr>
+	 <td id="mat9" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/switzer.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/ecuwodo.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Switzerland 
+		 </td>
+		 <td align="center">		
+			 Ecuador
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 1:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Brasilia <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(9);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	<tr>
+		<td onclick ="show_det(10);"class="btn btn-3 btn-3c" >10.</td>
+		<td>France <b>Vs</b> Honduras</td>
+		<td>June 15</td>
+	
+	<tr/>
+	<tr>
+	 <td id="mat10" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/france.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/handuras.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			France 
+		 </td>
+		 <td align="center">		
+			 Honduras
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 4:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Porto Alegre <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(10);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	<tr>
+		<td onclick ="show_det(11);"class="btn btn-3 btn-3c" >11.</td>
+		<td> Argentina <b>Vs</b> Bosnia-Herzegovina</td>
+		<td> June 15</td>
+		
+	<tr/>
+	<tr>
+	 <td id="mat11" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/argentina.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/bosnia.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Argentina 
+		 </td>
+		 <td align="center">		
+			 Bosnia-Herzegovina
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 7:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Rio De Janeiro <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(11);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	
+	<tr id="5">
+		<td onclick ="show_det(12);" class="btn btn-3 btn-3c" >12.</td>
+		<td>Germany <b>Vs</b> Portugal</td>
+		<td> June 16</td>
+		
+	<tr/>
+	<tr>
+	 <td id="mat12" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/germany.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/portugal.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Germany 
+		 </td>
+		 <td align="center">		
+			 Portugal
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 1:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Salvador <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(12);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	
+	<tr>
+		<td onclick ="show_det(13);" class="btn btn-3 btn-3c" >13.</td>
+		<td>Iran <b>Vs</b> Nigeria	</td>
+		<td> June 16	</td>
+		
+	<tr/>
+	<tr>
+	 <td id="mat13" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/iran.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/nigreia.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Iran 
+		 </td>
+		 <td align="center">		
+			 Nigeria
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 4:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Curitiba <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(13);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	<tr>
+		<td onclick ="show_det(14);" class="btn btn-3 btn-3c" >14.	</td>
+		<td> Ghana <b>Vs</b> USA</td>
+		<td> June 16</td>
+		
+	<tr/>
+	<tr>
+	 <td id="mat14" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/ghana.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/usa.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Ghana 
+		 </td>
+		 <td align="center">		
+			 USA
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 7:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Natal <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(14);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	<tr id="51">
+		<td onclick ="show_det(15);" class="btn btn-3 btn-3c" >15.</td>
+		<td>Belgium <b>Vs</b> Algeria</td>
+		<td> June 17</td>
+		
+	<tr/>
+	<tr>
+	 <td id="mat15" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/belgum.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/algeria.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Belgium 
+		 </td>
+		 <td align="center">		
+			 Algeria
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 1:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Belo Horizonte <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(15);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	<tr>
+		<td onclick ="show_det(16);" class="btn btn-3 btn-3c" >16.</td>
+		<td> Brazil <b>Vs</b> Mexico</td>
+		<td> June 17</td>
+		
+	<tr/>
+	<tr>
+	 <td id="mat16" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/braz.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/Mexico.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Brazil 
+		 </td>
+		 <td align="center">		
+			 Mexico
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 4:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Fortaleza <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(16);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	
+	<tr>
+		<td onclick ="show_det(17);" class="btn btn-3 btn-3c" >17.</td>
+		<td> Russia <b>Vs</b> Korea Republic</td>
+		<td> June 17</td>
+		
+	<tr/>
+	<tr>
+	 <td id="mat17" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/russia.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/korean repub.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Russia 
+		 </td>
+		 <td align="center">		
+			 Korea Republic
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 7:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Cuiaba <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(17);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	<tr  id="6">
+		<td onclick ="show_det(18);" class="btn btn-3 btn-3c" >18.</td>
+		<td> Australia <b>Vs</b> Netherlands</td>
+		<td> June 18</td>
+		
+	<tr/>
+	<tr>
+	 <td id="mat18" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/aust.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/nether.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Australia 
+		 </td>
+		 <td align="center">		
+			 Netherlands
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 1:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Porto Alegre <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(18);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	<tr  id="7">
+		<td onclick ="show_det(19);" class="btn btn-3 btn-3c" >21.</td>
+		<td> Spain <b>Vs</b> Chile</td>
+		<td> June 18</td>
+		
+	<tr/>
+	<tr>
+	 <td id="mat19" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/spain.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/chile.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Spain 
+		 </td>
+		 <td align="center">		
+			 Chile
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 4:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Rio De Janeiro<b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(19);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	<tr>
+		<td onclick ="show_det(20);" class="btn btn-3 btn-3c" >20.</td>
+		<td> Cameroon <b>Vs</b> Croatia</td>
+		<td> June 18</td>
+		
+	<tr/>
+	<tr>
+	 <td id="mat20" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/camer.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/Crot.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Cameroon 
+		 </td>
+		 <td align="center">		
+			 Croatia
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 7:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Manaus <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(20);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+		
+	<tr id="52">
+		<td onclick ="show_det(21);" class="btn btn-3 btn-3c" >21.</td>
+		<td>Colombia <b>Vs</b> Côte d'Ivoire</td>
+		<td> June 19</td>
+		
+	<tr/>
+	<tr>
+	 <td id="mat21" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/colomb.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/cote.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Colombia 
+		 </td>
+		 <td align="center">		
+			 Côte d'Ivoire
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 1:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Brasilia<b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(21);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	
+	<tr>
+		<td onclick ="show_det(22);" class="btn btn-3 btn-3c" >22.</td>
+		<td> Uruguay <b>Vs</b> England</td>
+		<td> June 19</td>
+		
+	<tr/>
+	<tr>
+	 <td id="mat22" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/urugu.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/england.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Uruguay 
+		 </td>
+		 <td align="center">		
+			 England
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 4:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Sao Paulo <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(22);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	
+	<tr>
+		<td onclick ="show_det(23);" class="btn btn-3 btn-3c" >23.</td>
+		<td> Japan <b>Vs</b> Greece</td>
+		<td> June 19</td>
+	<tr/>
+	<tr>
+	 <td id="mat23" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/japan.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/greece.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Japan 
+		 </td>
+		 <td align="center">		
+			 Greece
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 7:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Natal <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(23);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	
+	<tr  id="8">
+		<td onclick ="show_det(24);" class="btn btn-3 btn-3c" >24.</td>
+		<td> Italy <b>Vs</b> Costa Rica</td>
+		<td> June 20	</td>
+		
+	<tr/>
+	<tr>
+	 <td id="mat24" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/italy.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/costarica.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Italy 
+		 </td>
+		 <td align="center">		
+			 Costa Rica
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 1:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Recife <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(24);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	
+	<tr>
+		<td onclick ="show_det(25);" class="btn btn-3 btn-3c" >25.</td>
+		<td> Switzerland <b>Vs</b> France</td>
+		<td> June 20</td>
+		
+	<tr/>
+	<tr>
+	 <td id="mat26" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/switzer.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/france.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Switzerland 
+		 </td>
+		 <td align="center">		
+			 France
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 4:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Salvador <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(25);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	
+	<tr>
+		<td onclick ="show_det(26);" class="btn btn-3 btn-3c" >26.</td>
+		<td> Honduras <b>Vs</b> Ecuador</td>
+		<td> June 20</td>
+		
+	<tr/>
+	<tr>
+	 <td id="mat26"style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/handuras.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/ecuwodo.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Honduras 
+		 </td>
+		 <td align="center">		
+			 Ecuador
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 7:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Curitiba <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(26);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	<tr  id="9">
+		<td onclick ="show_det(27);" class="btn btn-3 btn-3c" > 27.</td>
+		<td> Argentina <b>Vs</b> Iran</td>
+		<td>June 21</td>
+		
+	<tr/>
+	<tr>
+	 <td id="mat27" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/argentina.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/iran.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Argentina 
+		 </td>
+		 <td align="center">		
+			 Iran
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 1:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Belo Horizonte <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(27);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	<tr>
+		<td onclick ="show_det(28);" class="btn btn-3 btn-3c" >28.	</td>
+		<td>Germany <b>Vs</b> Ghana</td>
+		<td>June 21</td>
+		
+	<tr/>
+	<tr>
+	 <td id="mat28" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/germany.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/ghana.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Germany 
+		 </td>
+		 <td align="center">		
+			 Ghana
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 4:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Fortaleza<b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(28);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	<tr>
+		<td onclick ="show_det(29);" class="btn btn-3 btn-3c" >29.</td>
+		<td>Nigeria <b>Vs</b> Bosnia-Herzegovina</td>
+		<td> June 21	</td>
+		
+	<tr/>
+	<tr>
+	 <td id="mat29" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/nigreia.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/bosnia.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Nigeria 
+		 </td>
+		 <td align="center">		
+			 Bosnia-Herzegovina
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 7:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Cuiaba <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(29);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	
+	<tr  id="10">
+		<td onclick ="show_det(30);" class="btn btn-3 btn-3c" >30.</td>
+		<td>Belgium <b>Vs</b> Russia</td>
+		<td> June 22</td>
+		
+	<tr/>
+	<tr>
+	 <td id="mat30" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/belgum.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/russia.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Belgium 
+		 </td>
+		 <td align="center">		
+			 Russia
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 1:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Rio De Janeiro <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(30);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	<tr>
+		<td onclick ="show_det(31);" class="btn btn-3 btn-3c" >31.</td>
+		<td> Korea Republic <b>Vs</b> Algeria</td>
+		<td> June 22</td>
+		
+	<tr/>
+	<tr>
+	 <td id="mat31" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/korean repub.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/algeria.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Korea Republic 
+		 </td>
+		 <td align="center">		
+			 Algeria
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 4:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Porto Alegre <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(31);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	<tr>
+		<td onclick ="show_det(32);" class="btn btn-3 btn-3c" >32.</td>
+		<td> USA <b>Vs</b> Portugal</td>
+		<td> June 22	</td>
+		
+	<tr/>
+	<tr>
+	 <td id="mat32" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/usa.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/portugal.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			USA 
+		 </td>
+		 <td align="center">		
+			 Portugal
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 7:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Manaus <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(32);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	
+	
+	<tr  id="11">
+		<td onclick ="show_det(33);" class="btn btn-3 btn-3c" >33.</td>
+		<td> Australia <b>Vs</b> Spain	</td>
+		<td> June 23	</td>
+		
+	<tr/>
+	<tr>
+	 <td id="mat33" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/aust.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/spain.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Australia 
+		 </td>
+		 <td align="center">		
+			 Spain
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 1:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Sao Paulo <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(33);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	<tr>
+		<td onclick ="show_det(34);" class="btn btn-3 btn-3c" >34.</td>
+		<td> Netherlands <b>Vs</b> Chile</td>
+		<td> June 23	</td>
+		
+	<tr/>
+	<tr>
+	 <td id="mat34" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/nether.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/chile.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Netherlands 
+		 </td>
+		 <td align="center">		
+			 Chile
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 1:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Sao Paulo <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(34);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	<tr>
+		<td onclick ="show_det(35);" class="btn btn-3 btn-3c" >35.</td>
+		<td> Cameroon <b>Vs</b> Brazil</td>
+		<td>June 23</td>
+		
+	<tr/>
+	<tr>
+	 <td id="mat35" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/camer.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/braz.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Cameroon 
+		 </td>
+		 <td align="center">		
+			 Brazil
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 5:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Brasilia<b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(35);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	<tr>
+		<td onclick ="show_det(36);" class="btn btn-3 btn-3c" >36.	</td>
+		<td> Croatia <b>Vs</b> Mexico</td>
+		<td>June 23</td>
+		
+	<tr/>
+	<tr>
+	 <td id="mat36" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/Crot.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/Mexico.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Croatia 
+		 </td>
+		 <td align="center">		
+			 Mexico
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 5:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Recife <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(36);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	<tr  id="12">
+		<td onclick ="show_det(37);" class="btn btn-3 btn-3c" >37.</td>
+		<td> Italy <b>Vs</b> Uruguay</td>
+		<td>June 24</td>
+		
+	<tr/>
+	<tr>
+	 <td id="mat37" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/italy.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/urugu.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Italy 
+		 </td>
+		 <td align="center">		
+			 Uruguay
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 1:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Natal <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(37);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	<tr>
+		<td onclick ="show_det(38);" class="btn btn-3 btn-3c" >38.</td>
+		<td>Costa Rica <b>Vs</b> England</td>
+		<td>June 24</td>
+		
+	<tr/>
+	<tr>
+	 <td id="mat38" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/costarica.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/england.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Costa Rica 
+		 </td>
+		 <td align="center">		
+			 England
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 1:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Belo Horizonte <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(38);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	<tr>
+		<td onclick ="show_det(39);" class="btn btn-3 btn-3c" >39.	</td>
+		<td>Japan <b>Vs</b> Colombia</td>
+		<td>June 24</td>
+		
+	<tr/>
+	<tr>
+	 <td id="mat39" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/japan.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/colomb.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Japan 
+		 </td>
+		 <td align="center">		
+			 Colombia
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 5:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Cuiaba <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(39);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	<tr>
+		<td onclick ="show_det(40);" class="btn btn-3 btn-3c" >40.	</td>
+		<td>Greece <b>Vs</b> Côte d'Ivoire</td>
+		<td>June 24</td>
+		
+	<tr/>
+	<tr>
+	 <td id="mat40" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/greece.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/cote.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Greece 
+		 </td>
+		 <td align="center">		
+			 Côte d'Ivoire
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 5:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Fortaleza<b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(40);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	<tr  id="13">
+		<td onclick ="show_det(41);" class="btn btn-3 btn-3c" >41.</td>
+		<td>Nigeria <b>Vs</b> Argentina</td>
+		<td> June 25</td>
+		
+	<tr/>
+	<tr>
+	 <td id="mat41" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/nigreia.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/argentina.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Nigeria 
+		 </td>
+		 <td align="center">		
+			 Argentina
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 1:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Porto Alegre <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(41);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	<tr>
+		<td onclick ="show_det(42);" class="btn btn-3 btn-3c" >42.</td>
+		<td>Bosnia-Herzegovina <b>Vs</b> Iran</td>
+		<td>June 25</td>
+		
+	<tr/>
+	<tr>
+	 <td id="mat42" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/bosnia.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/iran.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Bosnia-Herzegovina 
+		 </td>
+		 <td align="center">		
+			 Iran
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 1:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Salvador <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(42);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	
+	<tr>
+		<td onclick ="show_det(43);" class="btn btn-3 btn-3c" >43.</td>
+		<td>Honduras <b>Vs</b> Switzerland</td>
+		<td>June 25</td>
+		
+	<tr/>
+	<tr>
+	 <td id="mat43" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/handuras.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/switzer.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Honduras 
+		 </td>
+		 <td align="center">		
+			 Switzerland
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 5:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Manaus <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(43);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	
+	<tr>
+		<td onclick ="show_det(44);" class="btn btn-3 btn-3c" >44.</td>
+		<td>Ecuador <b>Vs</b> France</td>
+		<td>June 25</td>
+		
+	<tr/>
+	<tr>
+	 <td id="mat44" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/ecuwodo.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/france.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Ecuador 
+		 </td>
+		 <td align="center">		
+			 France
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 5:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Rio De Janeiro <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(44);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	<tr id="14">
+		<td onclick ="show_det(45);" class="btn btn-3 btn-3c" >45.</td>
+		<td> USA <b>Vs</b> Germany</td>
+		<td>June 26</td>
+		
+	<tr/>
+	<tr>
+	 <td id="mat45" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/usa.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/germany.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			USA 
+		 </td>
+		 <td align="center">		
+			 Germany
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 1:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Recife <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(45);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	<tr>
+		<td onclick ="show_det(46);" class="btn btn-3 btn-3c" >46.</td>
+		<td>Portugal <b>Vs</b> Ghana</td>
+		<td> June 26</td>
+		
+	<tr/>
+	
+	<tr>
+	 <td id="mat46" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/portugal.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/ghana.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Portugal 
+		 </td>
+		 <td align="center">		
+			 Ghana
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 1:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Brasilia <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(46);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	<tr>
+		<td onclick ="show_det(47);" class="btn btn-3 btn-3c" >47.</td>
+		<td> Korea Republic <b>Vs</b> Belgium</td>
+		<td> June 26</td>
+		
+	<tr/>
+	
+	<tr>
+	 <td id="mat47" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/korean repub.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/belgum.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Korea Republic 
+		 </td>
+		 <td align="center">		
+			 Belgium
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 5:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Sao Paulo <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(47);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	<tr>
+		<td onclick ="show_det(48);" class="btn btn-3 btn-3c" >48.</td>
+		<td> Algeria <b>Vs</b> Russia</td>
+		<td> June 26</td>
+		
+	<tr/>
+	
+	<tr>
+	 <td id="mat48" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/algeria.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/russia.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Algeria 
+		 </td>
+		 <td align="center">		
+			 Russia
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 5:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Curitiba <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(48);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	</table>
+	
+	<br/>
+	<span class="title_style">Round of Best 16 Teams</span>
+	<table border ="0">
+    <tr>
+	<td>#</td>
+	<td width="78%;">Team</td>
+	<td>Date</td>
+	
+	</tr>
+	
+	<tr  id="15">
+	<td onclick ="show_det(49);" class="btn btn-3 btn-3c" >49.</td>
+	<td>Winner Group A <b>Vs</b> Winner Group B </td>
+	<td>Jun 28</td>
+	
+	</tr>
+		
+	<tr>
+	 <td id="mat49" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/final_logo.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/final_logo.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Winner Group A 
+		 </td>
+		 <td align="center">		
+			 Winner Group B
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 1:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Belo Horizonte <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(49);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	<tr>
+	<td onclick ="show_det(50);" class="btn btn-3 btn-3c" >50.</td>
+	<td>Winner Group C <b>Vs</b> Winner Group D </td>
+	<td>Jun 28</td>
+	</tr>
+	
+	<tr>
+	 <td id="mat50" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/final_logo.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/final_logo.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Winner Group C 
+		 </td>
+		 <td align="center">		
+			 Winner Group D
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 5:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Belo Horizonte <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(50);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	
+	<tr id="16">
+	<td onclick ="show_det(51);" class="btn btn-3 btn-3c" >51.</td>
+	<td>Winner Group B <b>Vs</b> Winner Group A </td>
+	<td>Jun 29</td>
+	
+	</tr>
+	
+	<tr>
+	 <td id="mat51" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/final_logo.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/final_logo.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Winner Group B
+		 </td>
+		 <td align="center">		
+			 Winner Group A
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 1:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Fortaleza <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(51);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	<tr>
+	<td onclick ="show_det(52);" class="btn btn-3 btn-3c" >52.</td>
+	<td>Winner Group D <b>Vs</b> Winner Group C </td>
+	<td>Jun 29</td>
+	
+	</tr>
+	
+	<tr>
+	 <td id="mat52" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/final_logo.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/final_logo.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Winner Group D
+		 </td>
+		 <td align="center">		
+			 Winner Group C
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 5:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Recife <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(52);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	<tr id="17">
+	<td onclick ="show_det(53);" class="btn btn-3 btn-3c" >53.</td>
+	<td>Winner Group E <b>Vs</b> Winner Group F </td>
+	<td>Jun 30</td>
+	
+	</tr>
+	
+	<tr>
+	 <td id="mat53" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/final_logo.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/final_logo.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Winner Group E
+		 </td>
+		 <td align="center">		
+			 Winner Group F
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 1:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Brasilia <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(53);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	<tr>
+	<td onclick ="show_det(54);" class="btn btn-3 btn-3c" >54.</td>
+	<td>Winner Group G <b>Vs</b> Winner Group H </td>
+	<td>Jun 30</td>
+	
+	</tr>
+	
+	<tr>
+	 <td id="mat54" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/final_logo.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/final_logo.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Winner Group G 
+		 </td>
+		 <td align="center">		
+			 Winner Group H
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 5:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Porto Alegre <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(54);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	<tr  id="17">
+	<td onclick ="show_det(55);" class="btn btn-3 btn-3c" >55.</td>
+	<td>Winner Group F <b>Vs</b> Winner Group E </td>
+	<td>July 01</td>
+	
+	</tr>
+	
+	<tr>
+	 <td id="mat55" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/final_logo.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/final_logo.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Winner Group F 
+		 </td>
+		 <td align="center">		
+			 Winner Group E
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 1:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Sao Paulo <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(55);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	<tr>
+	<td onclick ="show_det(56);" class="btn btn-3 btn-3c" >56.</td>
+	<td>Winner Group H <b>Vs</b> Winner Group G </td>
+	<td>July 01</td>
+	
+	</tr>
+	
+	<tr>
+	 <td id="mat56" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/final_logo.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/final_logo.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Winner Group H 
+		 </td>
+		 <td align="center">		
+			 Winner Group G
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 5:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Salvador <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(56);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	</table>
+	
+	<br/>
+	
+	<span class="title_style">Quarter finals</span>
+	<table border ="0">
+	<tr>
+	<td>#</td>
+	<td width="78%;">Team</td>
+	<td>Date</td>
+	
+	</tr>
+	<tr  id="18">
+	<td onclick ="show_det(57);" class="btn btn-3 btn-3c" >57.</td>
+	<td>Winner Match 49 <b>Vs</b> Winner Match 50</td>
+	<td>July 04</td>
+	
+	</tr>
+	
+	<tr>
+	 <td id="mat57" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/final_logo.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/final_logo.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Winner Match 49
+		 </td>
+		 <td align="center">		
+			 Winner Match 50
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 1:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Fortaleza <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(57);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	<tr>
+	<td onclick ="show_det(58);" class="btn btn-3 btn-3c" >58.</td>
+	<td>Winner Match 53 <b>Vs</b> Winner Match 54</td>
+	<td>July 04</td>
+	
+	</tr>
+	
+	<tr>
+	 <td id="mat58" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/final_logo.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/final_logo.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Winner Match 53
+		 </td>
+		 <td align="center">		
+			 Winner Match 54
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 5:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Rio De Janeiro <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(58);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	
+	<tr  id="20">
+	<td onclick ="show_det(59);" class="btn btn-3 btn-3c" >59.</td>
+	<td>Winner Match 55 <b>Vs</b> Winner Match 56</td>
+	<td>July 05</td>
+	
+	</tr>
+	
+	<tr>
+	 <td id="mat59" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/final_logo.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/final_logo.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Winner Match 55
+		 </td>
+		 <td align="center">		
+			 Winner Match 56
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 1:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Brasilia <b>
+		</td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(59);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	
+	<tr>
+	<td onclick ="show_det(60);" class="btn btn-3 btn-3c" >60.</td>
+	<td>Winner Match 51 <b>Vs</b> Winner Match 52</td>
+	<td>July 05</td>
+	
+	</tr>
+	
+	<tr>
+	 <td id="mat60" style="display:none;" colspan="4" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/final_logo.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/final_logo.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Winner Match 51
+		 </td>
+		 <td align="center">		
+			 Winner Match 52
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 5:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Salvador <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(60);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	</table>
+	
+	<br/>
+	<span class="title_style">Semi-Finals</span>
+	<table border ="0">
+	<tr>
+	<td>#</td>
+	<td width="80%;">Team</td>
+	<td>Date</td>
+	</tr>
+	<tr  id="21">
+	<td onclick ="show_det(61);" class="btn btn-3 btn-3c" >61.</td>
+	<td>Winner Match 57 <b>Vs</b> Winner Match 58 </td>
+	<td>July 8</td>
+	
+	</tr>
+	
+	<tr>
+	 <td id="mat61" style="display:none;" colspan="3" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/final_logo.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/final_logo.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Winner Match 57 
+		 </td>
+		 <td align="center">		
+			 Winner Match 58
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 5:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Belo Horizonte <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(61);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	
+	<tr  id="22">
+	<td onclick ="show_det(62);" class="btn btn-3 btn-3c" >62.</td>
+	<td>Winner Match 59 <b>Vs</b> Winner Match 60 </td>
+	<td>July 9</td>
+	
+	</tr>
+	
+	<tr>
+	 <td id="mat62" style="display:none;" colspan="3" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/final_logo.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/final_logo.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Winner Match 59 
+		 </td>
+		 <td align="center">		
+			 Winner Match 60
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 5:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Sao Paulo <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(62);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	</table>
+	
+	<br/>
+	<span class="title_style">Third-Place Play-Off</span>
+	<table border ="0">
+	<tr>
+	<td>#</td>
+	<td width="78%;">Team</td>
+	<td>Date</td>
+	</tr>
+	<tr  id="23">
+	<td onclick ="show_det(63);" class="btn btn-3 btn-3c" >63.</td>
+	<td>Loser Match 61 <b>Vs</b> Loser Match 62 </td>
+	<td>July 12</td>
+	
+	</tr>
+	
+	<tr>
+	 <td id="mat63" style="display:none;" colspan="3" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/final_logo.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;<b>Vs</b> </b></td>
+		 <td>
+			<img src="flags/final_logo.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Loser Match 61
+		 </td>
+		 <td align="center">		
+			 Loser Match 62
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 5:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Brasilia <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(63);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	</table>
+	
+	<br/>
+	<span class="title_style">Final</span>
+	<table border ="0">
+	<tr>
+	<td>#</td>
+	<td width="78%;">Team</td>
+	<td>Date</td>
+	
+	</tr>
+	<tr id="24">
+	<td onclick ="show_det(64);" class="btn btn-3 btn-3c" >64.</td>
+	<td>Winner Match 61 <b>Vs</b> Winner Match 62 </td>
+	<td>July 13</td>
+	
+	</tr>
+	
+	<tr>
+	 <td id="mat64" style="display:none;" colspan="3" height="100px;">
+		<div style="position:relative;">
+		<table width="100%">
+		<tr>
+		 <td><img src="flags/final_logo.png" class="inner-image_1"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		 <td rowspan="2"><b style="font-size:30px;"> &nbsp;&nbsp;&nbsp;Vs </b></td>
+		 <td>
+			<img src="flags/final_logo.png" class="inner-image_2"/>
+			<img src="img/officalball.png" class='logo_img'/>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center">		
+			Winner Match 61 
+		 </td>
+		 <td align="center">		
+			 Winner Match 62
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Time 5:00:00 PM</b>
+		 </td>
+		</tr>
+		<tr>
+		 <td align="center" colspan="4">		
+			 <b>Venue: Rio De Janeiro <b>
+		 </td>
+		</tr>
+		</table>
+		<center>
+		<button id="hide" onclick ="hide_det(64);" class="btn btn-3 btn-3a icon-cart4" >Hide</button>
+		</center>
+	    </div>
+	 </td>
+	</tr>
+	</table>
+	
+	</center>
+	
+    <!-- Footer -->
+    <div class="footer">
+      <div class="container">
+        <p class="pull-left"><a href="http://erbenlab.com">www.erbenlab.com</a></p>
+            <!-- <p class="pull-right"><a href="##myModal" role="button" data-toggle="modal"> <i class="icon-mail"></i> CONTACT</a></p>-->
+      </div>
+    </div>
+    <!-- Contact form in Modal -->
+    <!-- Modal 
+    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel"><i class="icon-mail"></i> Contact Me</h3>
+      </div>
+      <div class="modal-body">
+        <form>
+          <input type="text" placeholder="Yopur Name">
+          <input type="text" placeholder="Your Email">
+          <input type="text" placeholder="Website (Optional)">
+          <textarea rows="3" style="width:80%"></textarea>
+          <br/>
+          <button type="submit" class="btn btn-large"><i class="icon-paper-plane"></i> SUBMIT</button>
+        </form>
+      </div>
+    </div>-->
+    <!-- Scripts -->
+    <script src="js/vertical-scroll.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+                $('#myModal').modal('hidden');
+				
+				
+    </script>
+    </body>
+    </html>
