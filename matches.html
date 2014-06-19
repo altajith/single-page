@@ -50,9 +50,7 @@
     </head>
     <body>
 <script>
-	window.onload=function(){
-  		load_scores();
-	};
+	
 	
 	$(document).ready(function () {
         $('#select-anchor').change( function () {
@@ -61,24 +59,6 @@
         });
     });
 
-	
-		function load_scores(){
-		
-  		if (window.XMLHttpRequest) {
-    		// code for IE7+, Firefox, Chrome, Opera, Safari
-    		xmlhttp=new XMLHttpRequest();
-  		} else {  // code for IE6, IE5
-    		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-  		}
-  		xmlhttp.onreadystatechange=function() {
-    		if (xmlhttp.readyState==4 && xmlhttp.status==200) {
-      			document.getElementById("rssOutput").innerHTML=xmlhttp.responseText;
-    		}
-  		}
-  		xmlhttp.open("GET","http://www.councilofcoders.com/world-cup-app/getrss.php",true);
-  		xmlhttp.send();
-	}
-	
 	
   	function RefreshMe(){
   		location.reload();
@@ -106,7 +86,7 @@
     <center>
     <a class="btn btn-3 btn-3a icon-cart1" href="#" onclick="RefreshMe()"><i class="icon-paper-plane"></i><b>R</b>efresh</a> 
     
-     <a class="btn btn-3 btn-3a icon-cart2" href="matches.html"><i class="icon-trophy"></i><b>M</b>atches</a>
+     <a class="btn btn-3 btn-3a icon-cart2" href="index.html"><i class="icon-trophy"></i><b>B</b>ack</a>
     </center>
     <!-- <div id="rssOutput"></div>-->
     <!-- </div>-->
