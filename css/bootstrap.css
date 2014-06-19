@@ -49,6 +49,11 @@ html {
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
 }
+body
+{
+	background-color:#11D170;
+}
+
 a:focus {
 	outline: none;
 }
@@ -169,9 +174,8 @@ body {
 	line-height: 20px;
 	color: #203748;
 	background-color: #fff;
-	width: 90%;
-	margin-left: auto;
-	margin-right: auto;
+	width: 100%;
+	
 }
 a {
 	color: #0088cc;
@@ -2839,10 +2843,9 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 }
 .navbar-inner {
 	min-height: 40px;
-	padding-left: 20px;
-	padding-right: 20px;
-	background-color: #f04949;
- *zoom: 1;
+	padding-left: 0px;
+	padding-right: 0px;
+	*zoom: 1;
 }
 .navbar-inner:before, .navbar-inner:after {
 	display: table;
@@ -2860,6 +2863,7 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 	overflow: visible;
 }
 .navbar .brand {
+
 	float: left;
 	display: block;
 	padding: 5px 20px;
@@ -2951,7 +2955,7 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 	border-radius: 0;
 }
 .navbar-fixed-top, .navbar-fixed-bottom {
-	position: fixed;
+	position: relative;
 	right: 0;
 	left: 0;
 	z-index: 1030;

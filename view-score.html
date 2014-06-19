@@ -2,7 +2,7 @@
     <html lang="en">
     <head>
     <meta charset="utf-8">
-    <title>FIFA Live Scores</title>
+    <title>SINGLE PAGE | Flat Design Mini Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Flat Design Mini Portfolio">
     <meta name="keywords" content="responsive, bootstrap, flat design, flat ui, portfolio">
@@ -11,7 +11,7 @@
     <!-- styles -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="css/style-single-page.css" rel="stylesheet">
+    <link media="screen and (min-width: 200px) and (max-width:1000px)"href="css/style-single-page.css" rel="stylesheet">
     <link href="font/css/fontello.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
     <!-- Add jQuery library -->
@@ -56,7 +56,8 @@
   		var div_apnd=document.getElementById("rssOutput");
    		ifrm = document.createElement("IFRAME"); 
    		ifrm.setAttribute("src", url); 
-   		ifrm.setAttribute("style", "width:100% !important; height:250px !important;"); 
+   		ifrm.style.width = "100%"; 
+   		ifrm.style.height = "100%"; 
    		div_apnd.appendChild(ifrm); 
 	} 
   	
@@ -65,11 +66,11 @@
   	}
 </script>
 
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">  <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> <a class="brand" href="#profile">
-        <img style='margin-left:20px;width:40px;height:40px' src="img/logo.png"/></a> <h1>FIFA Live Scores</h1>
-              <!-- <ul class="nav nav-collapse pull-right">
+    <div class="navbar">
+      <div class="navbar-inner header" >
+        <div class="container"><a class="brand">
+        <img class='img_style' style="" src="img/logo.png"/></a><h1 class="font_style">FIFA Live Scores</h1>
+            <!-- <ul class="nav nav-collapse pull-right">
             <li><a href="#profile"><i class="icon-user"></i> Profile</a></li>
             <li><a href="#skills"><i class="icon-trophy"></i> Skills</a></li>
             <li><a href="#work"><i class="icon-picture"></i> Work</a></li>
@@ -81,21 +82,39 @@
         </div>
       </div>
     </div>
-    <div class="clearfix">
-    
     <center>
-    <div id="rssOutput">
-     <center>
-    	<a href="#" onclick="RefreshMe()">
-    		<img style="width:50px; height:50px;" src="images/refresh.png" />
-    	</a>
-    </center>
-   
-    <a class="hire-me" href="index.html">Back</a> 
-    <br/><br/></div>
     
+    <a class="btn btn-3 btn-3a icon-cart1" href="index.html">Back</a> 
+    <a class="btn btn-3 btn-3a icon-cart2" href="#" onclick="RefreshMe()">Refresh</a><br/><br/></div>
+	  </center>
+    <div id="rssOutput">
     </div>
-   </center>
+    <!-- Footer -->
+    <div class="footer">
+      <div class="container">
+        <p class="pull-left"><a href="http://erbenlab.com">www.erbenlab.com</a></p>
+            <!-- <p class="pull-right"><a href="##myModal" role="button" data-toggle="modal"> <i class="icon-mail"></i> CONTACT</a></p>-->
+      </div>
+    </div>
+    <!-- Contact form in Modal -->
+    <!-- Modal 
+    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel"><i class="icon-mail"></i> Contact Me</h3>
+      </div>
+      <div class="modal-body">
+        <form>
+          <input type="text" placeholder="Yopur Name">
+          <input type="text" placeholder="Your Email">
+          <input type="text" placeholder="Website (Optional)">
+          <textarea rows="3" style="width:80%"></textarea>
+          <br/>
+          <button type="submit" class="btn btn-large"><i class="icon-paper-plane"></i> SUBMIT</button>
+        </form>
+      </div>
+    </div>-->
+    <!-- Scripts -->
     <script src="js/vertical-scroll.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
